@@ -10,7 +10,9 @@ export const getDialogResponse = (text) => async (dispatch) => {
   const body = JSON.stringify({ text });
 
   try {
+    console.log('talking to the server...');
     const res = await axios.post('/api/df_text_query', body, config);
+    console.log('response from the server...', res);
     const results = {
       user: res.data.queryText,
       bot: res.data.fulfillmentText,
