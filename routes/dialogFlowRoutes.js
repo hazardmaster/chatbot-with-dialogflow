@@ -2,6 +2,7 @@ const chatbot = require('../chatbot/chatbot');
 
 module.exports = (app) => {
   app.post('/api/df_text_query', async (req, res) => {
+    console.log('server endpoint reached', req);
     const responses = await chatbot.textQuery(
       req.body.text,
       req.body.parameters
