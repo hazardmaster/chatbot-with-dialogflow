@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const Message = ({ dialog: { loading, dialogs } }) => {
   console.log(dialogs);
+
   return (
     !loading &&
     dialogs.map((item) => (
